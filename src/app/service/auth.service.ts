@@ -6,40 +6,38 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
+  
+  private readonly API_URL = 'https://jsonplaceholder.typicode.com/';
 
   // Tüm postlar
   GetPosts() {
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
+    return this.http.get(this.API_URL + 'posts');
   }
 
   // Tüm Commentler
   GetComments() {
-    return this.http.get('https://jsonplaceholder.typicode.com/comments');
+    return this.http.get(this.API_URL + 'comments');
   }
 
   // Tüm userlar
   GetAll() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get(this.API_URL + 'users');
   }
 
   // User'a ait postlar
   GetUserPosts(id: number) {
-    return this.http.get(
-      'https://jsonplaceholder.typicode.com/posts?userId=' + id
-    );
+    return this.http.get(this.API_URL + 'posts?userId=' + id);
   }
 
   // Post'a ait commentler
   GetPostComments(id: number) {
-    return this.http.get(
-      'https://jsonplaceholder.typicode.com/comments?postId=' + id
-    );
+    return this.http.get(this.API_URL + 'comments?postId=' + id);
   }
 
   // Post Update
   async UpdatePost(id: number, userId: any, title: any, body: any) {
     return this.http
-      .put('https://jsonplaceholder.typicode.com/posts/' + id, {
+      .put(this.API_URL + 'posts/' + id, {
         id: id,
         userId: userId,
         title: title,
@@ -56,7 +54,7 @@ export class AuthService {
 
   // Post Delete
   DeletePost(id: number) {
-    return this.http.delete('https://jsonplaceholder.typicode.com/posts/' + id);
+    return this.http.delete(this.API_URL + 'posts/' + id);
   }
 
   // Comment Update
@@ -68,7 +66,7 @@ export class AuthService {
     body: any
   ) {
     return this.http
-      .put('https://jsonplaceholder.typicode.com/comments/' + id, {
+      .put(this.API_URL + 'comments/' + id, {
         id: id,
         postId: postId,
         name: name,
@@ -86,15 +84,11 @@ export class AuthService {
 
   // Comment Delete
   DeleteComment(id: number) {
-    return this.http.delete(
-      'https://jsonplaceholder.typicode.com/comments/' + id
-    );
+    return this.http.delete(this.API_URL + 'comments/' + id);
   }
 
   // Tüm Todo'lar
   GetTodos() {
-    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+    return this.http.get(this.API_URL + 'todos');
   }
-
-
 }
