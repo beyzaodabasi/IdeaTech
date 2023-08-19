@@ -1,0 +1,193 @@
+<h1 mat-dialog-title>View User {{ data.id }}</h1>
+<form [formGroup]="viewPostForm">
+  <div
+    mat-dialog-content
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    "
+  >
+    <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input
+        matInput
+        formControlName="id"
+        placeholder="Id"
+        [(ngModel)]="data.id"
+        readonly="true"
+        name="id"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        formControlName="name"
+        placeholder="Name"
+        [(ngModel)]="data.name"
+        readonly="true"
+        name="name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>User Name</mat-label>
+      <textarea
+        matInput
+        formControlName="username"
+        placeholder="User Name"
+        [(ngModel)]="data.username"
+        readonly="true"
+        name="username"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <textarea
+        matInput
+        formControlName="email"
+        placeholder="Email"
+        readonly="true"
+        name="email"
+        [(ngModel)]="data.email"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Street</mat-label>
+      <textarea
+        matInput
+        formControlName="street"
+        placeholder="Street"
+        readonly="true"
+        name="street"
+        [(ngModel)]="data.street"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Suite</mat-label>
+      <textarea
+        matInput
+        formControlName="suite"
+        placeholder="Suite"
+        readonly="true"
+        name="suite"
+        [(ngModel)]="data.suite"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>City</mat-label>
+      <textarea
+        matInput
+        formControlName="city"
+        placeholder="City"
+        readonly="true"
+        name="city"
+        [(ngModel)]="data.city"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Zipcode</mat-label>
+      <textarea
+        matInput
+        formControlName="zipcode"
+        placeholder="Zipcode"
+        readonly="true"
+        name="zipcode"
+        [(ngModel)]="data.zipcode"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Lat</mat-label>
+      <textarea
+        matInput
+        formControlName="lat"
+        placeholder="Lat"
+        readonly="true"
+        name="lat"
+        [(ngModel)]="data.lat"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Lng</mat-label>
+      <textarea
+        matInput
+        formControlName="lng"
+        placeholder="Lng"
+        readonly="true"
+        name="lng"
+        [(ngModel)]="data.lng"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <textarea
+        matInput
+        formControlName="phone"
+        placeholder="Phone"
+        readonly="true"
+        name="phone"
+        [(ngModel)]="data.phone"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Website</mat-label>
+      <textarea
+        matInput
+        formControlName="website"
+        placeholder="Website"
+        readonly="true"
+        name="website"
+        [(ngModel)]="data.website"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Company Name</mat-label>
+      <textarea
+        matInput
+        formControlName="companyName"
+        placeholder="Company Name"
+        readonly="true"
+        name="companyName"
+        [(ngModel)]="data.name"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Catch Phrase</mat-label>
+      <textarea
+        matInput
+        formControlName="catchPhrase"
+        placeholder="Catch Phrase"
+        readonly="true"
+        name="catchPhrase"
+        [(ngModel)]="data.catchPhrase"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Bs</mat-label>
+      <textarea
+        matInput
+        formControlName="bs"
+        placeholder="Bs"
+        readonly="true"
+        name="bs"
+        [(ngModel)]="data.bs"
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </div>
+</form>

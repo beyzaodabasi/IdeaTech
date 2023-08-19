@@ -1,0 +1,61 @@
+<h1 mat-dialog-title>View Posts {{ data.id }}</h1>
+<form [formGroup]="viewPostForm" >
+  <div
+    mat-dialog-content
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    "
+  >
+    <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input
+        matInput
+        formControlName="id"
+        placeholder="Id"
+        [(ngModel)]="data.id"
+        readonly="true"
+        name="id"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>User Id</mat-label>
+      <input
+        matInput
+        formControlName="userId"
+        placeholder="User Id"
+        [(ngModel)]="data.userId"
+        readonly="true"
+        name="userId"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <textarea
+        matInput
+        formControlName="title"
+        placeholder="Title"
+        [(ngModel)]="data.title"
+        readonly="true"
+        name="title"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Body</mat-label>
+      <textarea
+        matInput
+        formControlName="body"
+        placeholder="Body"
+        readonly="true"
+        name="body"
+        [(ngModel)]="data.body"
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </div>
+</form>

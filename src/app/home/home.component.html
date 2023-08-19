@@ -1,0 +1,24 @@
+<div style="text-align: center">
+  <h1>Welcome</h1>
+</div>
+<div class="card-container">
+  <div>
+    <div class="card highlight-card" (click)="navigateTo('/posts')">
+      <a routerLink="/posts">Posts 📫</a>
+    </div>
+
+    <div class="card highlight-card" (click)="navigateTo('/user')">
+      <a routerLink="/user">Users 🧑‍🤝‍🧑</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="card highlight-card" (click)="navigateTo('/comments')">
+      <a routerLink="/comments">Comments 💬</a>
+    </div>
+
+    <div class="card highlight-card" (click)="navigateTo('/todos')">
+      <a routerLink="/todos">Todos 📝</a>
+    </div>
+  </div>
+</div>

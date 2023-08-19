@@ -1,0 +1,67 @@
+<h1 mat-dialog-title>Update Posts {{ data.id }}</h1>
+<form [formGroup]="updatePostForm" (ngSubmit)="UpdatePost()">
+  <div
+    mat-dialog-content
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    "
+  >
+    <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input
+        matInput
+        formControlName="id"
+        placeholder="Id"
+        [(ngModel)]="data.id"
+        name="id"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>User Id</mat-label>
+      <input
+        matInput
+        formControlName="userId"
+        placeholder="User Id"
+        [(ngModel)]="data.userId"
+        name="userId"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <textarea
+        matInput
+        formControlName="title"
+        placeholder="Title"
+        [(ngModel)]="data.title"
+        name="title"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Body</mat-label>
+      <textarea
+        matInput
+        formControlName="body"
+        placeholder="Body"
+        [(ngModel)]="data.body"
+        name="body"
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      type="submit"
+      (click)="UpdatePost()"
+      mat-raised-button
+      color="primary"
+      cdkFocusInitial
+    >
+      Save
+    </button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </div>
+</form>
